@@ -1,5 +1,5 @@
 
-#define all(v)         v.begin(),v.end()
+#define all(v) v.begin(), v.end()
 
 class Solution
 {
@@ -21,8 +21,8 @@ class Solution
         reverse(all(s));
 
         int n = s.size();
-        vector<pair<int,int>> setL;
-        vector<pair<int,int>> setR;
+        vector<pair<int, int>> setL;
+        vector<pair<int, int>> setR;
 
         map<char, int> last;
 
