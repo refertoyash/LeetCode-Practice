@@ -23,7 +23,6 @@ class Solution
     {
         vector<int> nodes;
         inorder(root, nodes);
-        sort(nodes.begin(), nodes.end());
         int st = 0, end = nodes.size() - 1;
         while (st < end)
         {
