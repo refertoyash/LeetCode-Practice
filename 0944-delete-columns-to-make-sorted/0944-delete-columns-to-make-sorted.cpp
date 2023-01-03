@@ -8,9 +8,9 @@ public:
         for(int j = 0; j<m; j++){
             bool ok = false;
             for(int i = 0; i<n-1; i++){
-                if(strs[i][j]>strs[i+1][j]) {cnt++;break;}
+                if(strs[i][j]>strs[i+1][j]) ok = true;
             }
-            
+            if(ok) cnt++;
         }
         
         return cnt;
