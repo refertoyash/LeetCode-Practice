@@ -14,10 +14,7 @@ class Solution
                 if (arr[i][0] > r)
                 {
                    	//new beginning
-                    vector<int> temp;
-                    temp.push_back(l);
-                    temp.push_back(r);
-                    ans.push_back(temp);
+                    ans.push_back({l,r});
                     l = arr[i][0];
                     r = arr[i][1];
                 }
