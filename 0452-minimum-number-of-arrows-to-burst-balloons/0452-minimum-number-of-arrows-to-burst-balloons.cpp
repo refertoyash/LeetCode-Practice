@@ -1,31 +1,23 @@
 class Solution
 {
     public:
-        int findMinArrowShots(vector<vector < int>> &points)
+        int findMinArrowShots(vector<vector < int>> &arr)
         {   
-            vector<pair<int,int>> arr;
-            for(auto &v: points){
-                arr.push_back({v[0],v[1]});
-            }
-            
-            sort(arr.begin(), arr.end());
-            
+             sort(arr.begin(),arr.end());
+            int n = arr.size();
             int ans = 0, min_right = INT_MAX;
-
-            for (auto &v: arr)
-            {
-                if (v.first > min_right)
-                {
-                   	//not overlapping
+            
+            for(auto &v: arr){
+                if(v[0]>min_right){
+                    //not overlapping
                     ans++;
-                    min_right = v.second;
+                    min_right = v[1];
                 }
-                else
-                {
-                   	//overlapping
-                    min_right = min(min_right, v.second);
+                else{
+                    //overlapping
+                    min_right = min(min_right,v[1]);
                 }
             }
-            return ans + 1;
+            return ans+1;
         }
 };
