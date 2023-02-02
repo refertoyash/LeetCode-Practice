@@ -2,7 +2,7 @@ class Solution {
 public:
     
     bool cmp(string s1, string s2,map<char,int> &idx){
-        //kya s1,s2 se chhota hai??
+        //kya s1,s2 se pahle dictionary me aayega ??
         for(int i = 0; i<min(s1.size(),s2.size()); i++){
             if(s1[i]==s2[i]) continue;
             if(idx[s1[i]] > idx[s2[i]]) return false;
