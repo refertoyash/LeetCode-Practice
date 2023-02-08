@@ -1,4 +1,4 @@
-
+//Thanks: Vivek Gupta (This technique work for many logics)
 
 class Solution {
 public:
