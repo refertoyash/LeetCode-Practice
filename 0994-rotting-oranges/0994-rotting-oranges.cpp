@@ -19,6 +19,7 @@ class Solution
         {
 
             int k = q.size();
+            //inner loop here works in some kind as a "LEVEL",
             while (k--)
             {
                 int cx = q.front().first;
