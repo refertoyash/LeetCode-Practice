@@ -2,13 +2,13 @@ class Solution {
 public:
     int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
         //applying bfs 
-        set<string> ls;
+        unordered_set<string> ls;
         for(int i = 0; i<wordList.size(); i++){
             ls.insert(wordList[i]);
         }
         
         queue<string> q;
-        map<string,bool> vis;
+        unordered_map<string,bool> vis;
         q.push(beginWord);
         vis[beginWord] = true;
         
@@ -25,10 +25,8 @@ public:
                     string temp = curr;
                     for(char j = 'a'; j<='z'; j++){
                         temp[i] = j;
-                        // cout<<temp<<"\n";
                         if(ls.find(temp)!=ls.end()){
                             //proper neighbour
-                            // cout<<temp<<"--"<<level<<"\n";
                             if(temp==endWord) return level+1;
                             if(vis[temp]) continue;
                             q.push(temp);
